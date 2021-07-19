@@ -1,1 +1,264 @@
+@media (max-width: 767px)
 
+    .header
+        &__inner
+            display: flex
+            justify-content: flex-end
+        &__logo
+            img
+                width: 130px
+                height: 130px
+
+    .hamburger
+        display: block
+
+    .header__burger-menu
+        display: none
+        position: absolute
+        width: 100%
+        width: calc(100% + 30px)
+        left: -15px
+        z-index: 19
+        height: 100vh
+        overflow: hidden
+        overflow-y: hidden
+        top: 0
+        bottom: 0
+        right: 0
+        background: linear-gradient(180deg,#DDF5F7 0%, #D1F9FF 60.5%, #CAE3E6 150%, #A8C5C9 100%)
+        padding: 35% 20%
+        .header__link
+            display: block
+            text-align: center
+            & + .header__link
+                margin-top: 40px
+                margin-left: 0
+
+    .subtitle-center
+        text-align: left
+
+    .main
+        padding: 100px 0 100px 0
+        background: linear-gradient(180deg,#DDF5F7 0%, #D1F9FF 60.5%, #CAE3E6 150%, #A8C5C9 100%)
+        &__inner
+            padding-left: 0
+            display: flex
+            flex-wrap: wrap-reverse
+        &__bg
+            display: none
+        .subtitle, .title
+            width: 100%
+
+    video
+        position: unset
+        z-index: 11
+        object-fit: cover
+        width: 100%
+        margin-top: 50px
+
+    .about
+        &__item
+            flex-wrap: wrap
+        &__item-descr
+            width: 100%
+            margin-bottom: 40px
+            display: block
+        &__item-box
+            & + .about__item-box
+                display: block
+                margin-left: 0
+            &:first-child
+                display: flex
+                justify-content: space-between
+                align-items: flex-start
+        &__item-icon
+            width: 60px
+            height: 60px
+            img
+                width: 30px
+                height: 30px
+        &__item-number
+            font-size: 42px
+            margin-bottom: 0
+        &__item-title
+            margin-top: 10px
+        &__item-subtitle
+            margin-top: 20px
+        &__item-img
+            width: 100%
+            img
+                object-fit: cover
+                height: 100%
+        &__item-title
+            text-align: left
+        &__blocks
+            flex-wrap: wrap
+        &__block
+            width: 100%
+            margin-bottom: 40px
+
+    .schema__item
+        width: 100%
+
+    .quote
+        &__inner
+            flex-wrap: wrap
+        &__wrap
+            width: 100%
+        &__wrap2
+            border-right: none
+            border-bottom: 1px solid #fff
+            padding-bottom: 40px
+            margin-bottom: 40px
+            padding-right: 0
+            margin-right: 0
+        &__title
+            text-align: left
+
+    .footer1
+        &__inner
+            flex-wrap: wrap
+        &__block
+            width: 100%
+            & + .footer1__block
+                margin-top: 50px
+
+    .footer
+        &__inner
+            flex-direction: column
+            align-items: center
+        &__links
+            margin-top: 40px
+            margin-bottom: 40px
+            width: 100%
+            align-items: center
+            flex-direction: column
+        &__link
+            & + .footer__link
+                margin-left: 0
+                margin-top: 20px
+        &__contacts
+            width: 100%
+            flex-direction: column
+            align-items: center
+        &__socials
+            margin-bottom: 40px
+
+    .industrial
+        padding-top: 80px
+        padding-bottom: 80px
+        &__inner
+            flex-wrap: wrap-reverse
+        &__descr
+            width: 100%
+        &_img
+            width: 100%
+
+    .product
+        &__inner
+            flex-wrap: wrap
+        &__descr
+            width: 100%
+            margin-bottom: 40px
+        &__img
+            width: 100%
+
+    .product-country
+        &__inner
+            overflow: hidden
+        &__items
+            justify-content: flex-start
+            overflow-x: scroll
+        &__item
+            & + .product-country__item
+                margin-left: 35px
+
+    .product-about
+        &__item
+            flex-wrap: wrap
+        &__item-descr
+            width: 100%
+        &__item-img
+            margin-top: 40px
+            width: 100%
+
+@media (min-width: 768px) and (max-width: 991px)
+
+    .about
+        &__item
+            flex-wrap: wrap
+        &__item-descr
+            width: 100%
+            margin-bottom: 40px
+            justify-content: space-between
+        &__item-box
+            & + .about__item-box
+                display: flex
+                flex-direction: column
+                align-items: flex-end
+        &__item-img
+            width: 100%
+            img
+                object-fit: cover
+                height: 100%
+        &__blocks
+            flex-wrap: wrap
+        &__block
+            width: 45%
+            margin-bottom: 40px
+
+    .schema
+        &__item
+            width: 80%
+
+    .industrial
+        padding-top: 80px
+        padding-bottom: 80px
+        &__inner
+            flex-wrap: wrap-reverse
+        &__descr
+            width: 100%
+        &_img
+            width: 100%
+
+    .footer1
+        &__block
+            & + .footer1__block
+                width: 50%
+
+    .footer
+        &__inner
+            flex-wrap: wrap
+        &__logo
+            width: 20%
+        &__links
+            width: 80%
+            justify-content: flex-end
+        &__contacts
+            width: 100%
+            justify-content: flex-end
+
+@media (min-width: 992px) and (max-width: 1199px)
+    .main
+        .title, .subtitle
+            width: 100%
+
+    .about
+        &__item-img
+            img
+                object-fit: cover
+                height: 100%
+
+    .schema
+        &__item
+            width: 40%
+
+    .footer
+        &__inner
+            flex-wrap: wrap
+        &__links
+            width: 60%
+            justify-content: flex-end
+        &__contacts
+            width: 100%
+            justify-content: flex-end

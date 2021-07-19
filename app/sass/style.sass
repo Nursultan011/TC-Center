@@ -77,8 +77,10 @@ video
     position: absolute
     left: 0
     top: 0
-    width: 50%
+    width: 62%
     height: 100%
+    object-fit: cover
+    z-index: -1
 
 .form
 
@@ -96,6 +98,63 @@ video
         margin-top: 33px
     &::placeholder
         color: $white
+
+.hamburger
+    cursor: pointer
+    display: none
+    width: 25px
+    height: 18px
+    position: relative
+    z-index: 1215
+    -webkit-transition: all .5s ease
+    -moz-transition: all .5s ease
+    -ms-transition: all .5s ease
+    -o-transition: all .5s ease
+    transition: all .5s ease
+    span
+        top: 8px
+        right: 5%
+        display: block
+        transition: 0.3s
+        position: absolute
+        width: 0px
+        height: 0px
+        background-color: black
+        &::before, &::after
+            content: ''
+            display: block
+            transition: 0.3s
+            position: absolute
+            right: 0
+            width: 25px
+            height: 2px
+            background-color: black
+        &::before
+            content: ''
+            transform: translateY(-4px)
+        &::after
+            content: ''
+            transform: translateY(4px)
+    &_active
+        span
+            position: fixed
+            height: 0
+            &::before, &::after
+                width: 25px
+                right: 5%
+                top: 30px
+            &::before
+                -moz-transform: rotate(-45deg)
+                -ms-transform: rotate(-45deg)
+                -o-transform: rotate(-45deg)
+                -webkit-transform: rotate(-45deg)
+                transform: rotate(-45deg)
+            &::after
+                -moz-transform: rotate(45deg)
+                -ms-transform: rotate(45deg)
+                -o-transform: rotate(45deg)
+                -webkit-transform: rotate(45deg)
+                transform: rotate(45deg)
 
 .header
     &__inner
@@ -139,7 +198,7 @@ video
             &::after,&::before
                 opacity: 1
         & + .header__link
-            margin-left: 100px
+            margin-left: 55px
         &-active
             position: relative
             color: $black !important
@@ -160,7 +219,6 @@ video
 
 .main
     position: relative
-    background: linear-gradient(180deg, #DDF5F7 0%, #D1F9FF 60.5%, #CAE3E6 78.21%, #A8C5C9 100%)
     background-repeat: no-repeat
     padding: 83px 0 100px 0
     &__inner
@@ -169,6 +227,15 @@ video
         width: 60%
     .subtitle
         width: 70%
+    &__bg
+        position: absolute
+        right: 0
+        top: 0
+        bottom: 0
+        width: 38%
+        height: 100%
+        z-index: -1
+        background: linear-gradient(180deg, #DDF5F7 0%, #D1F9FF 60.5%, #CAE3E6 150%, #A8C5C9 100%)
 
 .about
     &__inner
@@ -202,8 +269,8 @@ video
             content: url('../img/L.svg')
             position: absolute
             z-index: 1
-            top: 0
-            right: 0
+            top: -10px
+            right: -10px
             background: #07172E
             width: 56px
             height: 56px
@@ -475,4 +542,180 @@ video
         text-transform: uppercase
         font-size: 14px
         font-weight: 400
+
+// NEXT PAGE ------
+
+.goods-suptitle
+    font-weight: 400
+    color: #282828
+    font-size: 14px
+    text-transform: uppercase
+    margin-bottom: 15px
+    line-height: 10px
+
+.goods-title
+    font-weight: 700
+    font-size: 32px
+    color: #282828
+    margin-bottom: 30px
+
+.goods-descr
+    font-size: 16px
+    line-height: 20px
+    font-weight: 400
+    color: #282828
+
+.goods-img
+    position: relative
+    &::before
+        display: flex
+        justify-content: center
+        align-items: center
+        content: url('../img/L.svg')
+        position: absolute
+        z-index: 1
+        top: -10px
+        right: -10px
+        background: #07172E
+        width: 56px
+        height: 56px
+
+.goods-subtitle
+    font-size: 16px
+    line-height: 20px
+    font-weight: 400
+    color: #282828
+    p
+        margin-bottom: 0
+        & + p
+            margin-top: 20px
+
+.industrial
+    padding-top: 40px
+    padding-bottom: 150px
+    &__inner
+        display: flex
+        justify-content: space-between
+    &__descr
+        width: 50%
+        margin-top: 60px
+    &_img
+        width: 45%
+        img
+            width: 100%
+    &__items
+    &__item
+        border-bottom: 1px solid #EFEFEF
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        padding-bottom: 10px
+        margin-bottom: 20px
+        span
+            width: 50%
+    &__title
+        font-weight: 600
+        font-size: 24px
+        line-height: 42px
+        color: #282828
+        margin-bottom: 25px
+    &__txt
+        font-weight: 600
+        font-size: 16px
+        line-height: 20px
+        color: #282828
+    &__box
+        & + .industrial__box
+            margin-top: 50px
+
+.product
+    padding-top: 40px
+    padding-bottom: 150px
+    &__inner
+        display: flex
+        justify-content: space-between
+    &__descr
+        width: 50%
+        margin-top: 60px
+    &__img
+        width: 45%
+        img
+            width: 100%
+
+.product-country
+    background: #F8F8F8
+    padding: 100px 0
+    &__items
+        display: flex
+        justify-content: center
+    &__item
+        & + .product-country__item
+            margin-left: 7%
+    &__img
+        margin-top: 50px
+        margin-bottom: 25px
+        img
+            border-radius: 100%
+            width: 130px
+            height: 130px
+    &__title
+        text-align: center
+        font-weight: 600
+        font-size: 20px
+        color: #282828
+
+.product-about
+    padding-top: 150px
+    padding-bottom: 150px
+    &__item
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 150px
+    &__item-descr
+        width: 50%
+    &__item-img
+        width: 40%
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            background: #00A4E8
+            bottom: -15px
+            left: -15px
+            width: 50%
+            height: 50%
+            z-index: -1
+        img
+            width: 100%
+    &__title
+        font-size: 20px
+        line-height: 28px
+        font-weight: 700
+        color: #282828
+        margin-bottom: 30px
+    &__item-subtitle
+        p
+            margin-bottom: 0
+            font-weight: 500
+            font-size: 18px
+            color: #282828
+            & + p
+                margin-top: 20px
+    &__steps
+    &__steps-img
+        width: 100%
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            background: #00A4E8
+            bottom: -15px
+            right: -15px
+            width: 20%
+            height: 50%
+            z-index: -1
+        img
+            width: 100%
+
 @import "media"
