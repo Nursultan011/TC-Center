@@ -67,6 +67,10 @@ h1,h2,h3,h4,h5,h6
     font-size: 18px
     color: $black
     padding: 16px 40px
+    transition: 0.3s
+    &:hover
+        background: #07172E
+        color: $white
 
 .wrap-center
     display: flex
@@ -77,7 +81,7 @@ video
     position: absolute
     left: 0
     top: 0
-    width: 62%
+    width: 100%
     height: 100%
     object-fit: fill
     z-index: -1
@@ -227,15 +231,6 @@ video
         width: 60%
     .subtitle
         width: 70%
-    &__bg
-        position: absolute
-        right: 0
-        top: 0
-        bottom: 0
-        width: 38%
-        height: 100%
-        z-index: -1
-        background: linear-gradient(180deg, #DDF5F7 0%, #D1F9FF 60.5%, #CAE3E6 150%, #A8C5C9 100%)
 
 .about
     &__inner
@@ -308,6 +303,10 @@ video
         margin-top: 30px
         display: block
         padding: 15px 25px
+        &:hover
+            background: black
+            color: white
+            border: 1px solid black
     &__wrap
         margin-top: 250px
         margin-bottom: 155px
@@ -380,6 +379,10 @@ video
         margin: 70px auto 0 auto
         font-size: 16px
         padding: 16px 40px
+        &:hover
+            background: black
+            color: white
+            border: 1px solid black
 
 .quote
     background-image: url('../img/quote-bg.png')
@@ -412,6 +415,9 @@ video
         font-weight: 400
         font-size: 14px
         padding: 15px 25px
+        &:hover
+            background: white
+            color: $black
 
 .footer1
     background: #00A4E8
@@ -457,7 +463,9 @@ video
         background: $black
         color: $white
         padding: 18px 40px
-
+        &:hover
+            background: transparent
+            border: 1px solid white
 .footer
     background: #07172E
     padding: 70px 0 30px 0
@@ -601,6 +609,9 @@ video
         margin-top: 60px
     &_img
         width: 45%
+        height: 100%
+        position: sticky
+        top: 25px
         img
             width: 100%
     &__items
@@ -715,6 +726,112 @@ video
             width: 20%
             height: 50%
             z-index: -1
+        img
+            width: 100%
+
+.electrod
+    &__inner
+    &__title
+        color: #282828
+        text-align: center
+        font-weight: 700
+        font-size: 20px
+        margin-bottom: 50px
+    &__suptitle
+        margin-bottom: 20px
+        text-align: center
+        font-weight: 500
+        font-size: 14px
+        color: #282828
+    &__items
+    &__item
+        display: flex
+        justify-content: space-between
+        & + .electrod__item
+            margin-top: 70px
+            align-items: center
+    &__item-descr
+        width: 45%
+        p
+            font-size: 16px
+            line-height: 20px
+            font-weight: 400
+            color: #282828
+            margin-bottom: 0
+            & + p
+                margin-top: 20px
+    &__item-img
+        width: 43%
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            background: #00A4E8
+            bottom: -15px
+            left: -15px
+            width: 50%
+            height: 50%
+            z-index: -1
+        img
+            width: 100%
+    .product-about__item
+        margin-top: 150px
+        .product-about__item-descr
+            width: 40%
+        .product-about__item-img
+            width: 50%
+        .product-about__title
+            margin-bottom: 0
+        .product-about__subbtitle
+            margin-top: 20px
+            margin-bottom: 30px
+    &__last
+        margin-top: 20px
+        .electrod__item
+            align-items: center
+            margin-top: 70px
+    &__last-img
+        width: 43%
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            background: #00A4E8
+            top: -15px
+            right: -15px
+            width: 50%
+            height: 50%
+            z-index: -1
+        img
+            width: 100%
+    &__last-descr
+        width: 47%
+        h3
+            font-weight: 600
+            font-size: 18px
+            color: #282828
+            margin-bottom: 20px
+        p
+            font-weight: 400
+            font-size: 16px
+            color: #282828
+            margin-bottom: 20px
+
+.sert
+    margin-top: 150px
+    padding-bottom: 150px
+    &__inner
+    &__title
+        text-align: center
+        font-weight: 700
+        font-size: 20px
+        color: #282828
+        margin-bottom: 50px
+    &__items
+        display: flex
+        justify-content: space-between
+    &__item
+        width: 31%
         img
             width: 100%
 
