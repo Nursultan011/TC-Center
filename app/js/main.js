@@ -18,3 +18,37 @@ $('.hamburger').click(function () {
         });
     }
 });
+
+$('.sliders__wrap').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows: true,
+    autoplaySpeed: 2000,
+    infinite: true,
+    prevArrow: '<button class="slick-arrow slick-prev"><img src="../img/arrow-prev.svg"></button>',
+    nextArrow: '<button class="slick-arrow slick-next"><img src="../img/arrow-next.svg"></button > ',
+    responsive: [
+        {
+            breakpoint: 1199,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        },
+    ]
+})
