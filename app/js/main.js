@@ -4,6 +4,17 @@ $('.hamburger').on('click', function (e) {
     return;
 });
 
+$('a').on('click', function () {
+    let href = $(this).attr('href');
+    $('html, body').animate({
+        scrollTop: $(href).offset().top
+    }, {
+        duration: 350,
+        easing: "linear"
+    });
+    return false;
+});
+
 $('.hamburger').click(function () {
     if ($(".header__burger-menu").is(":visible") == true) {
         $('.header__burger-menu').hide();
